@@ -9,6 +9,23 @@ function isPalindrome(word) {
 /*
   Add written explanation of your solution here
 */
+function reverse(word){
+  const wordArray =word.split("")
+  const reversedWordArray = wordArray.reverse()
+  const reversedWord = reversedWordArray.join("");
+  return reversedWord;
+}
+
+function isPalindrome (word){
+
+  const reversedWord =reverse(word);
+
+  if (word === reversedWord){
+    return true;
+  }else {
+    return false;
+  }
+}
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
